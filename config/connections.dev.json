@@ -1,0 +1,20 @@
+[
+    {
+        "serviceKey": "hcmUserService",
+        "type": "rest",
+        "url": "https://efix-dev1.hcm.us6.oraclecloud.com/hcmRestApi/scim/Users",
+        "operation": "GET"
+    },
+    {
+        "serviceKey": "hcmEmployeeService",
+        "type": "rest",
+        "url": "https://efix-dev1.fa.us6.oraclecloud.com/hcmRestApi/resources/latest/emps",
+        "operation": "GET"
+    },
+    {
+        "serviceKey": "hcmTimeEventRequestsService",
+        "type": "rest",
+        "url": "https://efix-dev1.fa.us6.oraclecloud.com/hcmRestApi/resources/latest/timeEventRequests",
+        "operation": "POST"
+    }
+]
