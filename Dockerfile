@@ -6,7 +6,8 @@ FROM base AS dependencies
 COPY ./src/ ./webapp/src
 COPY ./public/ ./webapp/public
 # COPY ./test/ ./webapp/test
-COPY ./package*.json ./.babelrc ./webpack.config.js ./webapp/
+#COPY ./package*.json ./.babelrc ./webpack.config.js ./webapp/
+COPY ./package*.json ./webpack.config.js ./webapp/
 
 
 # ---- Build react/vue/angular bundle static files ----
