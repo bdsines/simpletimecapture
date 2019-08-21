@@ -5,7 +5,7 @@ FROM node:11.12 AS base
 FROM base AS dependencies
 COPY ./src/ ./webapp/src
 COPY ./public/ ./webapp/public
-COPY ./test/ ./webapp/test
+# COPY ./test/ ./webapp/test
 COPY ./package*.json ./.babelrc ./webpack.config.js ./webapp/
 
 
@@ -18,7 +18,7 @@ RUN npm config set ca=""
 #RUN npm config set registry http://registry.npmjs.org/
 RUN npm install
 RUN npm run build
-RUN npm run test
+#RUN npm run test
 
 
 # --- Release with Alpine ----
