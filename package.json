@@ -28,6 +28,7 @@
     "dev": "webpack  --config webpack.config.js",
     "start:dev": "webpack-dev-server --env.REACT_APP_CLOUD_URL=local --config ./webpack.config.js --mode development",
     "start": "webpack-dev-server --hot --config ./webpack.config.js --mode production",
+    "build": "react-scripts build",
     "build-dev": "webpack -d --config ./webpack.config.js --mode development",
     "build-prod": "webpack -p --config ./webpack.config.js --mode production",
     "test": "react-scripts test",
