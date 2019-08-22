@@ -22,13 +22,13 @@ RUN npm set strict-ssl false
 RUN npm config set ca=""
 #RUN npm config set registry http://registry.npmjs.org/
 RUN npm install --verbose
-RUN npm run build
+RUN npm run build-dev
 #RUN npm run test
 
 
 # --- Release with Alpine ----
 FROM nginx:1.15.9-alpine
 WORKDIR /app
-COPY --from=build /app/build/ /usr/share/nginx/html
+COPY --from=build /app/dist/ /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
