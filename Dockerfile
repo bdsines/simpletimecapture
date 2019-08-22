@@ -2,7 +2,7 @@
 FROM node:11.12 AS base
 # -- Install Node Explicitly
 RUN apt-get update && apt-get install -y curl
-RUN curl -sL https://deb.nodesource.com/setup_11.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get update && apt-get install -y nodejs
 
 # ---- Dependencies ----
