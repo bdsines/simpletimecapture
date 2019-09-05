@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y nodejs
 # ---- Dependencies ----
 FROM base AS dependencies
 COPY ./src/ ./webapp/src
-COPY ./public/ ./webapp/public
+#COPY ./public/ ./webapp/public
 # COPY ./test/ ./webapp/test
 #COPY ./package*.json ./.babelrc ./webpack.config.js ./webapp/
 COPY ./package*.json ./webpack.config.js ./webapp/
