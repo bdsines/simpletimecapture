@@ -21,7 +21,7 @@ COPY --from=dependencies ./webapp ./
 RUN npm set strict-ssl false
 RUN npm config set ca=""
 #RUN npm config set registry http://registry.npmjs.org/
-RUN npm install --verbose
+RUN npm install
 RUN npm run build-dev
 #RUN npm run test
 
