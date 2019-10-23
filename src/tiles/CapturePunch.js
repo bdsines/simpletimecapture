@@ -78,10 +78,12 @@ class CapturePunch extends Component {
         return new Promise(function (resolve, reject) {
         // alert('personNumber was submitted: ' + this.state.personNumber);
         // var tmpPersonNumber=this.state.personnumber ;
-        fetch('https://efix-dev1.hcm.us6.oraclecloud.com/hcmRestApi/resources/latest/emps?' + 'q=PersonNumber = ' + personNumber + '&expand=personDFF', {
+       //fetch('https://efix-dev1.hcm.us6.oraclecloud.com/hcmRestApi/resources/latest/emps?' + 'q=PersonNumber = ' + personNumber + '&expand=personDFF', {
 
-            method: "GET",
-            headers: authheaders
+          //  method: "GET",
+          //  headers: authheaders
+        fetch('/api/hcmRestApi/resources/latest/emps?' + 'q=PersonNumber = ' + personNumber + '&expand=personDFF', {
+            method: "GET"
         })
             .then((response) => {
                 return response.json()
